@@ -1,0 +1,145 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "strict": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@layouts/*": [
+        "src/@layouts/*"
+      ],
+      "@layouts": [
+        "src/@layouts"
+      ],
+      "@core/*": [
+        "src/@core/*"
+      ],
+      "@core": [
+        "src/@core"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@components": [
+        "src/components.d.ts"
+      ],
+      "@axios": [
+        "src/plugins/axios"
+      ],
+      "@validators": [
+        "src/@core/utils/validators"
+      ],
+      "@enums": [
+        "src/enums"
+      ],
+      "@enums/*": [
+        "src/enums/*"
+      ],
+      "@router/*": [
+        "src/router/*"
+      ],
+      "@locales/*": [
+        "src/locales/*"
+      ],
+      "@mixins/*": [
+        "src/mixins/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@types": [
+        "src/types"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@views/*": [
+        "src/views/*"
+      ],
+      "@plugins/*": [
+        "src/plugins/*"
+      ],
+      "@store": [
+        "src/store"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@models": [
+        "src/models"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@interfaces": [
+        "src/interfaces"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+      "@composables": [
+        "src/composables"
+      ],
+      "@composables/*": [
+        "src/composables/*"
+      ],
+      "@pages": [
+        "src/pages"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@configurations": [
+        "src/configurations"
+      ],
+      "@configurations/*": [
+        "src/configurations/*"
+      ],
+      "@services": [
+        "src/services"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "skipLibCheck": true,
+    "types": [
+      "vuetify",
+      "vite/client",
+      "vite-plugin-vue-layouts/client"
+    ]
+  },
+  "include": [
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "themeConfig.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
