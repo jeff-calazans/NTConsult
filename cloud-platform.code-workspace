@@ -1,0 +1,135 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"hollowtree.vue-snippets",
+			"esbenp.prettier-vscode",
+			"leizongmin.node-module-intellisense",
+			"formulahendry.auto-rename-tag",
+			"formulahendry.auto-close-tag",
+			"dbaeumer.vscode-eslint",
+			"mgmcdermott.vscode-language-babel",
+			"editorconfig.editorconfig",
+			"xabikos.javascriptsnippets",
+			"stylelint.vscode-stylelint",
+			"fabiospampinato.vscode-highlight",
+			"github.vscode-pull-request-github",
+			"vue.volar",
+			"antfu.iconify",
+			"cipchk.cssrem",
+			"sonarsource.sonarlint-vscode",
+			"antfu.goto-alias",
+			"Vue.vscode-typescript-vue-plugin"
+		]
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "chrome",
+				"request": "launch",
+				"name": "launch:chrome",
+				"url": "http://localhost:5173",
+				"webRoot": "${workspaceFolder}/code/src",
+				"sourceMaps": true,
+				"sourceMapPathOverrides": {
+					"src/*": "${webRoot}/*",
+				},
+				"skipFiles": [
+					"<node_internals>/**/*.js",
+					"**/<node_internals>/**/*.js",
+					"**/node_modules/**/*.js",
+					"**/runtime.js",
+					"**/polyfills.js",
+					"**/vendor.js",
+					"**/analytics.js"
+				],
+				"preLaunchTask": "serve"
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "npm:install",
+				"type": "shell",
+				"command": "npm install",
+				"linux": {
+					"command": "if [ -d ${workspaceFolder}/code/node_modules ]; then npm install fi"
+				},
+				"windows": {
+					"command": "cmd",
+					"args": [
+						"/C",
+						"if not exist ${workspaceFolder}/code/node_modules  npm install"
+					],
+				},
+				"options": {
+					"cwd": "${workspaceFolder}/code"
+				},
+			},
+			{
+				"label": "serve",
+				"type": "shell",
+				"command": "npm run dev",
+				"options": {
+					"cwd": "${workspaceFolder}/code"
+				},
+				"isBackground": true,
+				"dependsOn": [
+					"npm:install"
+				],
+				"problemMatcher": [
+					{
+						"base": "$tsc-watch",
+						"background": {
+							"activeOnStart": true,
+							"beginsPattern": "VITE v",
+							"endsPattern": "ready in"
+						}
+					}
+				]
+			}
+		]
+	},
+	"settings": {
+		"terminal.integrated.cwd": "${workspaceFolder}/code",
+		"editor.formatOnSave": true,
+		"javascript.updateImportsOnFileMove.enabled": "always",
+		"[javascript]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features",
+			"editor.autoClosingBrackets": "always"
+		},
+		"[markdown]": {
+			"editor.defaultFormatter": "vscode.markdown-language-features"
+		},
+		"[scss]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
+		"[json]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[vue]": {
+			"editor.defaultFormatter": "Vue.volar",
+		},
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit",
+			"source.fixAll.stylelint": "explicit",
+			"source.organizeImports": "never"
+		},
+		"debug.onTaskErrors": "debugAnyway",
+		"javascript.preferences.importModuleSpecifier": "non-relative",
+		"typescript.preferences.importModuleSpecifier": "non-relative"
+	}
+}
