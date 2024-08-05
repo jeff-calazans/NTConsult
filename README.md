@@ -8,9 +8,12 @@ Projeto destinado ao Teste Prático de Desenvolvimento Front-End com Vue.js
 
 Recomendo abrir o arquivo **cloud-platform.code-workspace** com o Visual Studio Code para aproveitar as funcionalidades de debug, formatação e extensões recomendadas para rodar o projeto. 
 
-Para o rodar o projeto, vá na aba de debug e selecione no combobox como deseja rodar  o mesmo. 
+Para o rodar o projeto,aperte **F5** ou vá na aba de debug e selecione no combobox. 
 
-Porem é possivel rodar utilizano os seguintes passos. 
+
+
+
+Porem é possivel rodar utilizando os seguintes passos.
     
 Dentro da pasta code execute **npm install** para instalar os pacotes necessarios para utilização.
 
