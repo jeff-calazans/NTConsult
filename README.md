@@ -55,7 +55,4 @@ As **rotas** devem ser criadas dentro da pasta **code/router/routes** seguindo o
 * [Vuetify](https://next.vuetifyjs.com/)
 * [Vue Router](https://router.vuejs.org/)
 * [Pinia](https://pinia.esm.dev/)
-* [Docker]( https://docker.com/ )
-* [Docker Compose]( https://docs.docker.com/compose/ )
-* [Nginx]( https://www.nginx.com/ )
 * [Typescript]( https://www.typescriptlang.org/ )
